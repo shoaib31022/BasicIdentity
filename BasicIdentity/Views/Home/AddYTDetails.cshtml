@@ -1,0 +1,68 @@
+﻿@model BasicIdentity.Models.YtDetail
+
+@{
+    ViewData["Title"] = "AddYTDetails";
+}
+
+<h1>AddYTDetails</h1>
+
+<h4>YtDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddYTDetails">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Today" class="control-label"></label>
+                <input asp-for="Today" class="form-control" />
+                <span asp-validation-for="Today" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Todayposted" class="control-label"></label>
+                <input asp-for="Todayposted" class="form-control" />
+                <span asp-validation-for="Todayposted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NextPost" class="control-label"></label>
+                <input asp-for="NextPost" class="form-control" />
+                <span asp-validation-for="NextPost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Youtube" class="control-label"></label>
+                <input asp-for="Youtube" class="form-control" />
+                <span asp-validation-for="Youtube" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Facebook" class="control-label"></label>
+                <input asp-for="Facebook" class="form-control" />
+                <span asp-validation-for="Facebook" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Instagram" class="control-label"></label>
+                <input asp-for="Instagram" class="form-control" />
+                <span asp-validation-for="Instagram" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
